@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  margin: 40px 0 5px;
+  padding: 25px 0 5px;
+  opacity: 0.5;
+  text-align: center;
+  background: white;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: black;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #feb386;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #feb386;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px; 
+  margin: 0 30px;
+}
+}
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,400italic|Playfair+Display+SC:400,700&subset=latin,cyrillic);
+h2 {
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 100px;
+  letter-spacing: 1px;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 25px;
+  line-height: 1.7;
+  color: white;
+}
+
+.center-img {
+  display: block;
+  margin: 0 auto;
+}
+.button {
+  text-align: center;
+}
+
+.button > a {
+  color: #39739d;
+  background-color: #E1ECF4;
+  border: 1px solid #96bdd9; 
+  padding: 5px; 
+  border-radius: 5px;
+  box-shadow: inset 0 1px 0 #f4f8fb;
+  text-decoration: none;
+}
+.opacity {
+        float: right;
+        margin-right: 5px;
+        opacity: 0.7;
+    }
+.topic input {
+  width:200px;
+  height:30px;
+  box-sizing:border-box;
+}
+
+.description {
+  margin-top:10px;
+}
+.description textarea {
+  width:200px;
+  height:100px;
+  box-sizing:border-box;
+}

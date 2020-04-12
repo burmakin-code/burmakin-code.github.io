@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+   ul.hr {
+    margin: 0; 
+    padding: 4px;
+   }
+   ul.hr li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+   }
+  </style>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+  } );
+  </script> 
+<script>
+ $(function() {
+  $('#1').click(function() {
+    $(this).clone().draggable(true).appendTo( "body" )
+  });
+});
+</script>
+<script>
+ $(function() {
+  $('#2').click(function() {
+    $( this ).clone().draggable(true).appendTo( "body" )
+  });
+});
+</script>
+<script>
+ $(function() {
+  $('#3').click(function() {
+    $( this ).clone().draggable(true).appendTo( "body" )
+  });
+});
+</script>
+<script>
+ $(function() {
+  $('#4').click(function() {
+    $( this ).clone().draggable(true).appendTo( "body" )
+  });
+});
+</script>
+<script>
+ $(function() {
+  $('#draggable').droppable(true)
+}
+</script>
+</head>
+<body>     
+<ul class="hr">
+  <li><button> <img id="1" src="img/white.png" width="45" height="45">+</button></li>
+  <li><button> <img id="2" src="img/red.png" width="45" height="45">+</button></li> 
+  <li><button><img  id="3" src="img/elf.png" width="45" height="45">+</button></li> 
+  <li><button> <img id="4" src="img/kolokol.png" width="45" height="45">+</button></li> 
+</ul>
+  <img src="img/elka.png"  width="400" height="500" id="draggable" >
+</body>
+</html>
